@@ -22,22 +22,6 @@ document.addEventListener("click", function(e){
         menu.classList.remove("active");
     }
 });
-document.addEventListener("DOMContentLoaded", () => {
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("show");
-                observer.unobserve(entry.target);
-            }
-        });
-    });
-
-    document.querySelectorAll(".fade-in").forEach((el) => {
-        observer.observe(el);
-    });
-
-});
 </script>
 
 <body>
@@ -66,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </header>
             
         <section id="about-me" class="sectionBeginning">
-            <div class="insideSectionTop fade-in">
+            <div class="insideSectionTop">
                 <h3 class="title">About Me</h3>
             </div>
-            <div class="insideSectionBottom fade-in">
+            <div class="insideSectionBottom">
                 <div class="half">
                     <p class="paragraph">I recently graduated from George Mason University with a Bachelor’s degree in Computer Science, earning a 3.82 GPA. Based near Washington, D.C., I am currently seeking my first full-time opportunity where I can apply my skills and continue growing as a software engineer.</p>
                     <p class="paragraph">Progaming has been my passion, especially the challenge of solving problems and building systems that are both practical and impactful. I am most comfortable working with Python, and I also have experience with C and Java. In addition, I have worked with various software tools such as MongoDB, Android Studio, and Firebase.</p>
@@ -103,19 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
         </section>
 
         <section id="projects" class="section">
-            <div class="insideSectionTop fade-in">
+            <div class="insideSectionTop">
                 <h3 class="title">Projects</h3>
                 <p class="paragraph">Select a box to view the project</p>
             </div>
-            <div class="projectBox fade-in">
-                <a href="https://github.com/Palumpumz/personal-web" target="_blank" class="projectLink">
-                    <div class="projectCard">
-                        <h5>Personal Website</h5>
-                        <p class="paragraphProject">This personal website was built from scratch using HTML, CSS and JavaScript. The purpose of building this is to create my own website and learn about frontend and backend.</p>
-                        <h5>Skills</h4>
-                        <p class="paragraphProject">HTML, CSS, JavaScript</p>
-                    </div>
-                </a>
+            <div class="projectBox">
+                <div class="projectCard">
+                    <h5>Personal Website</h5>
+                    <p class="paragraphProject">This personal website was built from scratch using HTML, CSS and JavaScript. The purpose of building this is to create my own website and learn about frontend and backend.</p>
+                    <h5>Skills</h4>
+                    <p class="paragraphProject">HTML, CSS, JavaScript</p>
+                </div>
                 
                 <a href="https://github.com/Palumpumz/Baby-Products-Classification" target="_blank" class="projectLink">
                     <div class="projectCard">
@@ -135,10 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </section>
 
         <section id="contact" class="section">
-            <div class="insideSectionTop fade-in">
+            <div class="insideSectionTop">
                 <h3 class="title">Contact Me</h3>
             </div>
-            <div class="insideSectionBottom fade-in">
+            <div class="insideSectionBottom">
                 <div class="half">
                     <p class="paragraph">I'm currently seeking an entry-level position where I can utilize my knowledge and gain my experience<br><br><br></p>
                     <div class="icon-container">

@@ -5,16 +5,6 @@ body{
     margin: 0;
     background-color: #E5F1FF ;
 }
-.fade-in{
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.show{
-    opacity: 1;
-    transform: translateY(0);
-}
 .title{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 4vh;
