@@ -1,0 +1,151 @@
+<head>
+    <title>Wasulak Tammawutikul</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1c03d1f72a.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+
+function closeMenu(){
+    document.getElementById("navMenu").classList.remove("active");
+}
+
+document.addEventListener("click", function(e){
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".burger");
+
+    if(!menu.contains(e.target) && !burger.contains(e.target)){
+        menu.classList.remove("active");
+    }
+});
+</script>
+
+<body>
+    <div class="topBar">
+        <div class="logo">
+            <a href="#home">WT</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="options" id="navMenu">
+            <a href="#about-me" onclick="closeMenu()">About Me</a>
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
+        </div>      
+    </div>
+    <div class="wrapper">
+        <header id="home">
+            <img src="background.png" class="background">
+            <div class="headText">
+                <h1>Wasulak</h1>
+                <h2>Tammawutikul</h2>
+            </div>
+            <img src="foreground.png" class="foreground">
+        </header>
+            
+        <section id="about-me" class="sectionBeginning">
+            <div class="insideSectionTop">
+                <h3 class="title">About Me</h3>
+            </div>
+            <div class="insideSectionBottom">
+                <div class="half">
+                    <p class="paragraph">I recently graduated from George Mason University with a Bachelor’s degree in Computer Science, earning a 3.82 GPA. Based near Washington, D.C., I am currently seeking my first full-time opportunity where I can apply my skills and continue growing as a software engineer.</p>
+                    <p class="paragraph">Progaming has been my passion, especially the challenge of solving problems and building systems that are both practical and impactful. I am most comfortable working with Python, and I also have experience with C and Java. In addition, I have worked with various software tools such as MongoDB, Android Studio, and Firebase.</p>
+                    <p class="paragraph">Beside programming, I enjoy rock climbing, weight lifting, hiking and travel. Rock climbing is like problem solving, I enjoy figuring out what moves would help get the top. For hiking, I mostly seek for sunrise and sunset. It feels like a huge reward once you get to the top.</p>
+                </div>
+                <div class="half">
+                    <div class="sumBox">
+                        <h4>Quick bits</h4>
+                        <div class="infoRow">
+                            <p class="paragraph">Location</p>
+                            <p class="paragraph">Arlington, VA</p>
+                        </div>
+
+                        <div class="infoRow">
+                            <p class="paragraph">Languages</p>
+                            <p class="paragraph">Python,Java,C,HTML</p>
+                        </div>
+
+                        <div class="infoRow">
+                            <p class="paragraph">Frameworks</p>
+                            <p class="paragraph">Firebase,Scikit-learn,CSS</p>
+                        </div>
+
+                        <div class="infoRow">
+                            <p class="paragraph">Currently</p>
+                            <p class="paragraph">Open to work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <section id="projects" class="section">
+            <div class="insideSectionTop">
+                <h3 class="title">Projects</h3>
+                <p class="paragraph">Select a box to view the project</p>
+            </div>
+            <div class="projectBox">
+                <div class="projectCard">
+                    <h5>Personal Website</h5>
+                    <p class="paragraphProject">This personal website was built from scratch using HTML, CSS and JavaScript. The purpose of building this is to create my own website and learn about frontend and backend.</p>
+                    <h5>Skills</h4>
+                    <p class="paragraphProject">HTML, CSS, JavaScript</p>
+                </div>
+                
+                <a href="https://github.com/Palumpumz/Baby-Products-Classification" target="_blank" class="projectLink">
+                    <div class="projectCard">
+                        <h5>Baby-Products-Classification</h5>
+                        <p class="paragraphProject">Using a logistic regression classifier to predict the sentiment of a customer’s review from a large dataset of baby product reviews. Positive sentiment is represented by a review rating of +1 and Negative Sentiment is represented by a review rating of -1.</p>
+                        <p class="paragraphProject">In this assignment, I experience with bag of words and ngram representations, with and without TF-IDF weighting.</p>
+                        <h5>Skills</h4>
+                        <p class="paragraphProject">Python, Scikit-Learn</p>
+                    </div>
+                </a>
+
+                <div class="projectCard">
+                    <h5>Recipe Book Application</h5>
+                    <p class="paragraphProject">In coming ...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="insideSectionTop">
+                <h3 class="title">Contact Me</h3>
+            </div>
+            <div class="insideSectionBottom">
+                <div class="half">
+                    <p class="paragraph">I'm currently seeking an entry-level position where I can utilize my knowledge and gain my experience<br><br><br></p>
+                    <div class="icon-container">
+                        <a href="mailto:wtammawu@gmu.edu">
+                            <i class="fa-solid fa-envelope"></i>  E-Mail Me
+                        </a>
+                        <a href="https://github.com/Palumpumz" target="_blank">
+                            <i class="fa-brands fa-github"></i> Github
+                        </a>
+                        <a href="https://www.linkedin.com/in/wasulak" target="_blank">
+                            <i class="fa-brands fa-square-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                    <p class="paragraph"><br></p>
+                </div>
+                <div class="half">
+                    <div class="contactBox">
+                        <p class="paragraph">Let's get in touch!!!</p>
+                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                        <textarea type="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>   
+            </div>
+        </section> 
+    </div>
+</body>

@@ -1,0 +1,184 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: #E5F1FF ;
+}
+.title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3.75vh;
+}
+.paragraph{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.25vh;
+}
+.topBar{
+    background-color: #BDDCFF;
+    height: 7vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+    box-sizing:border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.logo a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight:bold;
+    color:#244F80;
+    text-decoration:none;
+}
+.options{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    gap: 40px;
+}
+.options a {
+    color:black;
+    text-decoration: none;
+    font-size: large;
+    transition: all 0.3s ease;
+}
+.options a:hover {
+    color: #0B4C85;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 0px #0B4C85;
+}
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.headText{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    color: #E5F1FF;
+    display: flex;
+    flex-direction: column;
+    transform:  translateZ(-15px) scale(2.5);
+    top: 5vh;
+}
+h1{
+    line-height: 0;
+    font-size: 9vw;
+    text-align:left;
+}
+h2{
+    line-height: 0;
+    font-size: 9vw;
+    margin-left: clamp(20px, 15vw, 200px);
+}
+.background {
+    transform:  translateZ(-20px) scale(3);
+    z-index: 1;
+}
+.foreground {
+    transform:  translateZ(-5px) scale(1.5);
+    z-index: 3;
+}
+.background,
+.name,
+.foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.section,
+.sectionProject{
+    background-color: #E5F1FF ;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 40px;
+    gap: clamp(20px, 4vw, 40px);
+}
+.section{
+    margin-top: -0.1vh;
+}
+.sectionProject{
+    flex-direction: column;
+}
+.insideSection{
+    width: 50%;
+    max-width: 65vh;
+}
+.insideSection img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.insideSectionV{
+    /* width: 50%; */
+    max-width: 65vh;
+
+    /* max-width: 65vh; */
+}
+.projectBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.projectCard{
+    height: 550px;
+    width: min(350px, 100vh);
+    border: 5px solid;
+    border-color: #0B4C85;
+    background-color: #DBEFFF;
+    transition: all 0.3s ease;
+}
+.projectCard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px;
+}
+
+.icon-container {
+    margin-left: 5vw;
+    flex-direction: column;
+    display: flex;
+    gap: 30px;
+}
+.icon-container a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 3vh;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.icon-container a:hover {
+    box-shadow: 0px 5px 5px black;
+    transform: translateY(-3px);
+    color: #196FB3;
+}
+@media (max-width: 900px){
+    .insideSection{
+        width: 90%;
+    }
+    .insideSectionV{
+        width: 90%;
+    }
+}
+
