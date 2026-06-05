@@ -6,12 +6,13 @@
 </head>
 
 <script>
-function toggleMenu(){
+function toggleMenu() {
     document.getElementById("navMenu").classList.toggle("active");
+    document.querySelector(".burger").classList.toggle("active");
 }
-
 function closeMenu(){
     document.getElementById("navMenu").classList.remove("active");
+    document.querySelector(".burger").classList.remove("active");
 }
 
 document.addEventListener("click", function(e){
@@ -20,6 +21,7 @@ document.addEventListener("click", function(e){
 
     if(!menu.contains(e.target) && !burger.contains(e.target)){
         menu.classList.remove("active");
+        burger.classList.remove("active");
     }
 });
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,7 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="#home">WT</a>
         </div>
         <div class="burger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
 
         <div class="options" id="navMenu">
@@ -113,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5>Personal Website</h5>
                         <p class="paragraphProject">This personal website was built from scratch using HTML, CSS, and JavaScript. The purpose of building this is to create my own website and learn about web design.</p>
                         <p class="paragraphProject">For the main welcome graphic, I used parallax CSS for 3 different layers. I also applied javascript so that the texts slowly appear and collapse the topbar options when it is a mobile screen size.</p>
-                        <h5>Skills</h4>
+                        <h5>Skills</h5>
                         <p class="paragraphProject">HTML, CSS, JavaScript</p>
                     </div>
                 </a>
@@ -123,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5>Baby Products Classification</h5>
                         <p class="paragraphProject">Using a logistic regression classifier to predict the sentiment of a customer’s review from a large dataset of baby product reviews. Positive sentiment is represented by a review rating of +1 and Negative Sentiment is represented by a review rating of -1.</p>
                         <p class="paragraphProject">In this assignment, I experience with bag of words and ngram representations, with and without TF-IDF weighting.</p>
-                        <h5>Skills</h4>
+                        <h5>Skills</h5>
                         <p class="paragraphProject">Python, Scikit-Learn</p>
                     </div>
                 </a>
