@@ -161,11 +161,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="half">
                     <div class="contactBox">
-                        <p class="paragraph">Let's get in touch!!!</p>
-                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-                        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-                        <textarea type="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-                        <button type="submit">Submit</button>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact">
+                            <p class="paragraph">Let's get in touch!!!</p>
+                            <input type="hidden" name="access_key" value="4acefda6-8c28-4280-9fc8-2900eb48fcbd">
+                            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                            <textarea type="message" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
                     </div>
                 </div>   
             </div>

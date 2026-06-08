@@ -148,11 +148,9 @@ h5{
 }
 .background {
     transform:  translateZ(-20px) scale(3);
-    /* z-index: 1; */
 }
 .foreground {
     transform:  translateZ(-5px) scale(1.5);
-    /* z-index: 3; */
 }
 .background,
 .foreground{
@@ -218,8 +216,8 @@ section{
     border-color: #0B4C85;
     background-color: #DBEFFF;
     transition: all 0.3s ease;
+    z-index: 1;
 }
-
 .projectLink{
     text-decoration: none;
     color: initial;
@@ -261,6 +259,13 @@ section{
     color: #666;
     border-radius: 50px;
 }
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
 .contactBox textarea{
     height: 140px;
     padding-top: 15px;
@@ -278,6 +283,10 @@ section{
     border-radius: 100px;
     border:#244F80;
     background: linear-gradient(#BDDCFF, #196FB3);
+}
+.contactBox button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 0px #0B4C85;
 }
 
 
